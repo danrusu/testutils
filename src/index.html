@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Postman Q&A</title>
+  <title>Feedback</title>
   <style>
     body {
       font-size: 20px;
@@ -64,11 +64,13 @@
   </div>
 
   <script>
-    const BACKEND = 'https://danrusu-feedback.herokuapp.com'
-    const questionElement = document.querySelector('#question');
+    //const BACKEND = 'https://danrusu-feedback.herokuapp.com';
+    const BACKEND = 'http://localhost:1111';
+    const feedbackElement = document.querySelector('#question');
+    feedbackElement.value = '';
     const submitFeedback = async () => {
       const notificationElement = document.querySelector('#notification');
-      if (questionElement.value.length < 10) {
+      if (feedbackElement.value.length < 10) {
         alert(`Questions must have at least 10 characters!`);
       } else {
         const response = await fetch(`${BACKEND}/feedback`, {
@@ -76,10 +78,10 @@
           headers: {
             'content-type': 'application/json',
           },
-          body: JSON.stringify({ question: questionElement.value }),
+          body: JSON.stringify({ feedback: feedbackElement.value }),
         });
         if (response.status === 200) {
-          questionElement.value = '';
+          feedbackElement.value = '';
           notificationElement.innerText = 'Feedback submitted!';
           notificationElement.style.color = 'green';
         }
@@ -89,8 +91,7 @@
         }
         setTimeout(() => { notificationElement.innerText = ''; }, 3000);
       }
-    };
-    questionElement.value = '';
+    };    
   </script>
 </body>
 
