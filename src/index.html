@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Postman Q&A</title>
+  <style>
+    body {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-top: 3em;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #form {
+      font-size: 1em;
+      margin-top: 1.5em;
+    }
+
+    button,
+    textarea,
+    #notification {
+      margin: auto;
+      display: block;
+    }
+
+    button {
+      margin-top: 1.5em;
+    }
+
+    a {
+      text-decoration: none;
+      color: orange;
+    }
+
+    #notification {
+      margin-top: 1.5em;
+      text-align: center;
+    }
+
+    textarea:valid {
+      border: 2px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    <a title="feedbacks" href="https://github.com/danrusu/anonymous-feedback.git">
+      Anonymous Feedback
+    </a>
+  </h1>
+
+  <div id="form">
+    <textarea id="question" type="textarea" rows="10" cols="50"
+      placeholder="Type your question here and submit it. You can use markdown.">
+    </textarea>
+    <button onclick="submitFeedback()">SUBMIT</button>
+    <div id="notification"></div>
+  </div>
+
+  <script>
+    const BACKEND = 'https://danrusu-feedback.herokuapp.com'
+    const questionElement = document.querySelector('#question');
+    const submitFeedback = async () => {
+      const notificationElement = document.querySelector('#notification');
+      if (questionElement.value.length < 10) {
+        alert(`Questions must have at least 10 characters!`);
+      } else {
+        const response = await fetch(`${BACKEND}/feedback`, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ question: questionElement.value }),
+        });
+        if (response.status === 200) {
+          questionElement.value = '';
+          notificationElement.innerText = 'Feedback submitted!';
+          notificationElement.style.color = 'green';
+        }
+        else {
+          notification.innerText = 'Failed to submit Feedback. Try again.'
+          notification.style.color = 'red';
+        }
+        setTimeout(() => { notificationElement.innerText = ''; }, 3000);
+      }
+    };
+    questionElement.value = '';
+  </script>
+</body>
+
+</html>
