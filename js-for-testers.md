@@ -3,3 +3,6 @@
 
 ***
 O buna oportunitate de invatare, informatia clara, foarte bine explicat, pe intelesul tuturor. La tot mai multe sedinte si chestii faine de invatat. Felicitari, Dan! Esti mereu o sursa de inspiratie :)
+
+***
+Thank you so much for your time and for teaching us! 
