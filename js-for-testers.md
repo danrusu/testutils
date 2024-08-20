@@ -11,3 +11,7 @@ Salutare, cred ca cursul ar trebui inceput ori primavara ori toamna, cu o frecve
 Cei de pe bench ar trebui sa isi faca obligatoriu cursul si temele. Ar trebui angrenati in aplicatii interne pentru a usura viata colegilor. Poate si un suport de curs a r fi benefic. Spor!
 ***
 dsdsadasdada
+***
+```javascript
+const x=10
+```
