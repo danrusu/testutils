@@ -15,3 +15,5 @@ Cei de pe bench ar trebui sa isi faca obligatoriu cursul si temele. Ar trebui an
 Excelenta prezentarea, conceptele sunt foarte clar explicate. Multumesc!
 ***
 This is a test feedback, please delete it.
+***
+This is a test feedback, please delete it.
