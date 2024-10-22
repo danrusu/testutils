@@ -31,3 +31,8 @@ Ceau, o idee ar fi si sa vorbim despre useful IDE extensions ce ne fac viata mai
 Ar fi folositor sa se vorbeasca putin si despre  basic branching  strategy, un cherry pick, git flow
 https://medium.com/@balaug3/branch-policies-azure-devops-8499f8b2f94e
 https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy
+***
+In general in proiect se intampla sa nu lucrezi singur ci cu o gramada de alti colegi si de cele mai multe ori pe cod legacy. Poate ar fi bine sa vorbim despre "best practices for writing code comments" si "How do you learn and understand legacy code written by others?"
+https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/
+https://www.linkedin.com/advice/3/how-do-you-learn-understand-legacy-code-written 
+De cele mai multe ori se pierde enorm de mult timp  la etapa asta
