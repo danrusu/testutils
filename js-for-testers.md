@@ -27,3 +27,7 @@ https://hyperskill.org/courses/65
 
 ***
 Ceau, o idee ar fi si sa vorbim despre useful IDE extensions ce ne fac viata mai usoara ca si tester, IDE and frameworks tips and tricks
+***
+Ar fi folositor sa se vorbeasca putin si despre  basic branching  strategy, un cherry pick, git flow
+https://medium.com/@balaug3/branch-policies-azure-devops-8499f8b2f94e
+https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy
