@@ -20,3 +20,7 @@ dfsdffsgfdgffffffffffffffffffff
 Ar trebui sa se insiste putin mai mult pe aplicabilitatea conceptelor invatate.
 As vorbi despre mai multe frameworkuri de testare ce folosesc JS: Puppeteer/Playwright/Nightwatch/Jasmine
 Macar cateva generalitati si cum difera intre ele, in ce tip de proiect/aplicatie s-ar preta. As insista putin mai mult pe aplicabilitate in tipul de aplicatie pe care il testam
+***
+Heya, poate ar trebui vazut si ce fac cei de la JetBrains Academy Hyperskill pe partea de JS: https://hyperskill.org/courses/32
+https://hyperskill.org/courses/125
+https://hyperskill.org/courses/65
