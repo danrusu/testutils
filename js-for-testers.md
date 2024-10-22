@@ -24,3 +24,6 @@ Macar cateva generalitati si cum difera intre ele, in ce tip de proiect/aplicati
 Heya, poate ar trebui vazut si ce fac cei de la JetBrains Academy Hyperskill pe partea de JS: https://hyperskill.org/courses/32
 https://hyperskill.org/courses/125
 https://hyperskill.org/courses/65
+
+***
+Ceau, o idee ar fi si sa vorbim despre useful IDE extensions ce ne fac viata mai usoara ca si tester, IDE and frameworks tips and tricks
