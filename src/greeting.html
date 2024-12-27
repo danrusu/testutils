@@ -55,7 +55,6 @@
     setTextColor(url);
     setGreetingMessage(url);
 
-
     function setGreetingMessage(url) {
       const message = ['greeting', 'name'].reduce((acc, paramName) =>
         `${acc} ${url.searchParams.get(paramName)}`, '');
@@ -65,7 +64,6 @@
       messageElement.innerHTML = message;
       messageElement.setAttribute('data-text', message);
     }
-
 
     function setTextColor(url) {
       const color = url.searchParams.get('color')
