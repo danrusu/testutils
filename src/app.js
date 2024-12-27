@@ -10,6 +10,7 @@ const serveFileFromRoot = (res, relativePath) =>
   res.sendFile(path.join(`${__dirname}/${relativePath}`));
 
 const serveHome = (_, res) => serveFileFromRoot(res, 'index.html');
+const serveGreeting = (_, res) => serveFileFromRoot(res, 'greeting.html');
 
 const feedbackHandler = async (req, res) => {
   try {
@@ -21,6 +22,7 @@ const feedbackHandler = async (req, res) => {
 };
 // routes
 app.get('/', serveHome);
+app.get('/greeting', serveGreeting);
 app.post('/feedback', feedbackHandler);
 
 const notifyServerStart = () =>

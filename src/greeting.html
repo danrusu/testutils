@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Greeting</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+    }
+
+    p {
+      position: relative;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 6em;
+      letter-spacing: 4px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #000, crimson, #000);
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: animate 5s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: -500%;
+      }
+
+      100% {
+        background-position: 500%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <p id="message">
+    </p>
+  </div>
+
+  <script>
+    const url = new URL(location.href);
+    const message = ['greeting', 'name'].reduce((acc, paramName) =>
+      `${acc} ${url.searchParams.get(paramName)}`, '');
+
+
+    const messageElement = document.getElementById('message');
+    messageElement.innerHTML = message;
+    messageElement.setAttribute('data-text', message);
+
+  </script>
+</body>
+
+</html>
