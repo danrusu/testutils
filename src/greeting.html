@@ -6,6 +6,8 @@
   <title>Greeting</title>
   <style>
     body {
+      --text-color: yellow;
+
       margin: 0;
       padding: 0;
       display: flex;
@@ -21,7 +23,7 @@
       font-size: 6em;
       letter-spacing: 4px;
       overflow: hidden;
-      background: linear-gradient(90deg, #000, yellow, #000);
+      background: linear-gradient(90deg, #000, var(--text-color), #000);
       background-repeat: no-repeat;
       background-size: 80%;
       animation: animate 5s linear infinite;
@@ -49,14 +51,28 @@
 
   <script>
     const url = new URL(location.href);
-    const message = ['greeting', 'name'].reduce((acc, paramName) =>
-      `${acc} ${url.searchParams.get(paramName)}`, '');
+
+    setTextColor(url);
+    setGreetingMessage(url);
 
 
-    const messageElement = document.getElementById('message');
-    messageElement.innerHTML = message;
-    messageElement.setAttribute('data-text', message);
+    function setGreetingMessage(url) {
+      const message = ['greeting', 'name'].reduce((acc, paramName) =>
+        `${acc} ${url.searchParams.get(paramName)}`, '');
 
+
+      const messageElement = document.getElementById('message');
+      messageElement.innerHTML = message;
+      messageElement.setAttribute('data-text', message);
+    }
+
+
+    function setTextColor(url) {
+      const color = url.searchParams.get('color')
+      if (color) {
+        document.body.style.setProperty("--text-color", color);
+      }
+    }
   </script>
 </body>
 
