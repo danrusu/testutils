@@ -53,13 +53,10 @@
     const url = new URL(location.href);
 
     setTextColor(url);
-    setGreetingMessage(url);
+    setMessage(url);
 
-    function setGreetingMessage(url) {
-      const message = ['greeting', 'name'].reduce((acc, paramName) =>
-        `${acc} ${url.searchParams.get(paramName)}`, '');
-
-
+    function setMessage(url) {
+      const message = url.searchParams.get('message');
       const messageElement = document.getElementById('message');
       messageElement.innerHTML = message;
       messageElement.setAttribute('data-text', message);
