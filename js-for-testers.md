@@ -34,3 +34,6 @@ In general in proiect se intampla sa nu lucrezi singur ci cu o gramada de alti c
 https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/
 https://www.linkedin.com/advice/3/how-do-you-learn-understand-legacy-code-written 
 De cele mai multe ori se pierde enorm de mult timp  la etapa asta
+
+***
+dfsffgggdgdsdffs
