@@ -25,8 +25,4 @@ app.get('/', serveHome);
 app.get('/message', serveMessage);
 app.post('/feedback', feedbackHandler);
 
-const notifyServerStart = () =>
-  console.log(`server listening at http://localhost:${port}/`);
-
-const port = process.env.PORT || 1111;
-app.listen(port, notifyServerStart);
+module.exports = { app };
