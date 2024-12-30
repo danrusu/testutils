@@ -4,7 +4,8 @@
   "description": "Anonymous Feedback Repository [PRIVATE]",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js"
   },
   "keywords": [
     "github",
@@ -15,5 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
