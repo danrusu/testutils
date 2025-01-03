@@ -28,3 +28,12 @@ In general in proiect se intampla sa nu lucrezi singur ci cu o gramada de alti c
 https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/
 https://www.linkedin.com/advice/3/how-do-you-learn-understand-legacy-code-written 
 De cele mai multe ori se pierde enorm de mult timp  la etapa asta
+
+***
+Hello!
+
+Mi-a placut parcursul de pana acum chiar daca timpul mi-a permis sa urmaresc doar retroactiv inregistrarile.
+In general mi se pare util faptul ca se urmareste formarea unei imagini de ansamblu asupra ceea ce se poate face cu JS din punct de vedere testare automata dar se si face o trecere prin mai multe tools si utilitare. 
+Poate una dintre sedinte chiar ar putea sa contina un hight level demo despre un proiect real de automatizare (daca este permis din punct de vedere client) astfel incat sa putem intelege cu ce fel de activitati se confrunta un tester care face testare automata in day by day tasks: ce se intampla cand se adauga noi features in aplicatie, cum se ruleaza testele, ce fel de teste se pot rula, cum se poate pastra test data, cu ce freventa se ruleaza, ce fel de rapoarte se genereaza, cum se verifica, cum se face maintenance. 
+
+Multumesc mult!
