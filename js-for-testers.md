@@ -37,3 +37,5 @@ In general mi se pare util faptul ca se urmareste formarea unei imagini de ansam
 Poate una dintre sedinte chiar ar putea sa contina un hight level demo despre un proiect real de automatizare (daca este permis din punct de vedere client) astfel incat sa putem intelege cu ce fel de activitati se confrunta un tester care face testare automata in day by day tasks: ce se intampla cand se adauga noi features in aplicatie, cum se ruleaza testele, ce fel de teste se pot rula, cum se poate pastra test data, cu ce freventa se ruleaza, ce fel de rapoarte se genereaza, cum se verifica, cum se face maintenance. 
 
 Multumesc mult!
+***
+sxcacccdsdssfsdfsdfsf
