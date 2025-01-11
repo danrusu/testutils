@@ -5,7 +5,7 @@ const path = require('path');
 const { submitFeedback } = require('./githubApi');
 
 const corsOptions = {
-  origin: false,
+  origin: true,
   optionsSuccessStatus: 200,  
 }
 
@@ -31,6 +31,7 @@ app.get('/', serveHome);
 app.get('/message', serveMessage);
 
 // API 
+app.options('/feedback', cors(corsOptions)); 
 app.post('/feedback', cors(corsOptions), feedbackHandler);
 
 module.exports = { app };
