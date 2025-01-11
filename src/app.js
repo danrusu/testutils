@@ -5,7 +5,7 @@ const path = require('path');
 const { submitFeedback } = require('./githubApi');
 
 const corsOptions = {
-  origin: 'https://testutils.com',
+  origin: false,
   optionsSuccessStatus: 200,  
 }
 
