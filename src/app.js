@@ -1,7 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const path = require('path');
 const { submitFeedback } = require('./githubApi');
+
+const corsOptions = {
+  origin: 'https://testutils.com',
+  optionsSuccessStatus: 200,  
+}
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -23,6 +29,8 @@ const feedbackHandler = async (req, res) => {
 // routes
 app.get('/', serveHome);
 app.get('/message', serveMessage);
-app.post('/feedback', feedbackHandler);
+
+// API 
+app.post('/feedback', cors(corsOptions), feedbackHandler);
 
 module.exports = { app };
