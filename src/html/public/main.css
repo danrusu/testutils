@@ -1,0 +1,71 @@
+:root {
+  --main-text-color: black;
+  --link-color: darkblue;
+
+  --header-background: white;
+  --footer-background: white;
+
+  --small-padding: 10px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  color: var(--main-text-color);
+}
+
+header {
+  min-height: 50px;
+  background: var(--header-background);
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+footer {
+  min-height: 20px;
+  background: var(--footer-background);
+  border-top: 1px solid var(--main-text-color);
+
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  padding: 5px;
+}
+
+footer address {
+  display: inline-block;
+}
+
+main span {
+  display: inline-block;
+  margin: var(--small-padding);
+  padding: var(--small-padding);
+  border: 2px solid var(--main-text-color);
+}
+
+h1 {
+  margin-top: calc(var(--small-padding) * 4);
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  margin-top: var(--small-padding);
+  font-size: 1em;
+  text-align: center;
+}
+
+a {
+  color: var(--link-color);
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#js4testers div {
+  margin-bottom: var(--small-padding);
+  text-align: center;
+
+}
