@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Feedback</title>
+  <style>
+    body {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-top: 3em;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 1em;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    #form {
+      font-size: 1em;
+      margin-top: 1.5em;
+    }
+
+    button,
+    textarea,
+    #notification {
+      margin: auto;
+      display: block;
+    }
+
+    button {
+      margin-top: 1.5em;
+    }
+
+    a {
+      text-decoration: none;
+      color: orange;
+    }
+
+    #notification {
+      margin-top: 1.5em;
+      text-align: center;
+    }
+
+    textarea:valid {
+      border: 2px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    <a title="feedbacks" href="https://github.com/danrusu/anonymous-feedback.git">
+      Anonymous Feedback
+    </a>
+  </h1>
+  <h2>
+    JS For Testers Workshop
+  </h2>
+
+  <div id="form">
+    <textarea id="question" type="textarea" rows="10" cols="50"
+      placeholder="Type your feedback here. You can use markdown.">
+    </textarea>
+    <button onclick="submitFeedback()">SUBMIT</button>
+    <div id="notification"></div>
+  </div>
+
+  <script>
+    const BACKEND = 'https://anonymous-feedback-f9a50211e30c.herokuapp.com';
+    // const BACKEND = 'http://localhost:1111';
+    const feedbackElement = document.querySelector('#question');
+    feedbackElement.value = '';
+    const submitFeedback = async () => {
+      const notificationElement = document.querySelector('#notification');
+      if (feedbackElement.value.length < 10) {
+        alert(`Questions must have at least 10 characters!`);
+      } else {
+        const response = await fetch(`${BACKEND}/feedback`, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ feedback: feedbackElement.value }),
+        });
+        if (response.status === 200) {
+          feedbackElement.value = '';
+          notificationElement.innerText = 'Feedback submitted!';
+          notificationElement.style.color = 'green';
+        }
+        else {
+          notification.innerText = 'Failed to submit Feedback. Try again.'
+          notification.style.color = 'red';
+        }
+        setTimeout(() => { notificationElement.innerText = ''; }, 3000);
+      }
+    };    
+  </script>
+</body>
+
+</html>

@@ -1,37 +1,35 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
-const path = require('path');
-const { submitFeedback } = require('./githubApi');
+
+const { join } = require('path');
+
+const { feedbackHandler } = require('./controllers/feedback-controller');
 
 const corsOptions = {
   origin: true,
-  optionsSuccessStatus: 200,  
-}
+  optionsSuccessStatus: 200,
+};
+
+// APP
+const app = express();
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('src/html/public'));
 
-const serveFileFromRoot = (res, relativePath) =>
-  res.sendFile(path.join(`${__dirname}/${relativePath}`));
+// ROUTES
 
-const serveHome = (_, res) => serveFileFromRoot(res, 'index.html');
-const serveMessage = (_, res) => serveFileFromRoot(res, 'message.html');
+app.get('/', serveFileFromHtml('index.html'));
+app.get('/message', serveFileFromHtml('message.html'));
 
-const feedbackHandler = async (req, res) => {
-  try {
-    await submitFeedback(req.body);
-    res.sendStatus(200);
-  } catch (e) {
-    res.sendStatus(500);
-  }
-};
-// routes
-app.get('/', serveHome);
-app.get('/message', serveMessage);
-
-// API 
-app.options('/feedback', cors(corsOptions)); 
+// FEEDBACK
+app.options('/feedback', cors(corsOptions));
+app.get('/feedback', serveFileFromHtml('feedback.html'));
 app.post('/feedback', cors(corsOptions), feedbackHandler);
+
+function serveFileFromHtml(...relativePath) {
+  return function (_req, res) {
+    res.sendFile(join(__dirname, 'html', ...relativePath));
+  };
+}
 
 module.exports = { app };
