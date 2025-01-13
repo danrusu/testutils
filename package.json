@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon --watch src -e js,html,css,json src/server.js"
+    "dev": "nodemon --watch src -e js,html,css,json src/server.js",
+    "test": "vitest run",
+    "test:dev": "vitest dev"
   },
   "keywords": [
     "github",
@@ -19,6 +21,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "vitest": "^2.1.8"
   }
 }

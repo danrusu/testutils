@@ -1,10 +1,11 @@
 # anonymous-feedback
 
-Anonymous Feedback Repository [PRIVATE]
+Test Utils Website [PRIVATE]
 
-## Goal: Fetch feedback from heroku/af page for different projects
+![Tests](https://github.com/danrusu/anonymous-feedback/actions/workflows/test.yml/badge.svg)
+
+## Feedback page `/feedback`: fetch feedback for different projects
 
 | Project                                                     | Feedback link                   |
 | ----------------------------------------------------------- | ------------------------------- |
-| dan-rusu                                                    | [Feedback](./dan-rusu.md)       |
 | [js-for-testers](https://github.com/danrusu/js-for-testers) | [Feedback](./js-for-testers.md) |
