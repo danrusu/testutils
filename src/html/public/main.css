@@ -1,37 +1,42 @@
 :root {
+  /* vars */
   --main-text-color: black;
   --link-color: darkblue;
 
   --header-background: white;
   --footer-background: white;
 
-  --small-padding: 10px;
+  --small-padding: 2vh;
+
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5;
+  color: var(--main-text-color);
 }
 
 body {
   min-height: 100vh;
-  margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
 
-  color: var(--main-text-color);
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  min-height: 50px;
+  min-height: 10vh;
   background: var(--header-background);
   border-bottom: 1px solid var(--main-text-color);
+  padding-top: calcvar(--small-padding);
 }
 
 footer {
-  min-height: 20px;
+  min-height: 3vh;
   background: var(--footer-background);
   border-top: 1px solid var(--main-text-color);
 
   text-align: center;
   font-size: small;
   font-weight: bold;
-  padding: 5px;
 }
 
 footer address {
@@ -46,20 +51,18 @@ main span {
 }
 
 h1 {
-  margin-top: calc(var(--small-padding) * 4);
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
 }
 
 h2 {
   margin-top: var(--small-padding);
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
 }
 
 a {
   color: var(--link-color);
-  padding: 10px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -67,5 +70,4 @@ a {
 #js4testers div {
   margin-bottom: var(--small-padding);
   text-align: center;
-
 }
