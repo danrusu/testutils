@@ -6,9 +6,15 @@
 .grid-container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 h1 {
@@ -22,20 +28,20 @@ h2 {
   text-align: center;
 }
 
-#form {
-  font-size: 1rem;
+textarea{
+  min-width: 500px;
   margin-top: 1.5rem;
+  font-size: 0.8rem;
 }
 
-button,
-textarea,
-#notification {
-  margin: auto;
-  display: block;
+textarea:valid {
+  border: 2px solid orange;
+  resize: vertical;
 }
 
 button {
   margin-top: 1.5rem;
+  font-size: 0.8rem;
 }
 
 a {
@@ -48,6 +54,30 @@ a {
   text-align: center;
 }
 
-textarea:valid {
-  border: 2px solid orange;
+@media (max-width: 500px) {
+  .grid-container{
+    grid-template-columns: 1fr;
+    justify-items: left;
+    align-items: start;
+  }
+  .grid-container > div:not(:has(textarea)){
+    display: none;
+  }
+  h1{
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 0;
+  }
+  h2{
+    font-size: 0.8rem;
+    margin-top: 0;
+    text-align: left;
+  }
+  button {
+    margin-top: 0.5rem;
+  }
+  textarea{
+    margin-top: 0.5rem;
+    min-width: auto;    
+  }
 }
