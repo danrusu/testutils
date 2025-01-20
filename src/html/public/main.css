@@ -1,6 +1,7 @@
 :root {
   /* vars */
   --main-text-color: black;
+  --main-background-color: white;
   --link-color: darkblue;
 
   --header-background: white;
@@ -11,8 +12,8 @@
   box-sizing: border-box;
 }
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
   margin: 0;
@@ -25,7 +26,7 @@ body {
   line-height: 1.5;
   color: var(--main-text-color);
   display: grid;
-  grid-template-rows: auto 1fr auto;  
+  grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -52,7 +53,7 @@ footer address {
 section {
   display: inline-block;
   margin: var(--small-padding);
-  padding: 0 var(--small-padding);
+  /* padding: 0 var(--small-padding); */
   border: 2px solid var(--main-text-color);
   border-radius: 5px;
   text-align: center;
@@ -70,18 +71,36 @@ h2 {
 }
 
 a {
-  color: var(--link-color);
   text-decoration: none;
   cursor: pointer;
 }
 
-#js4testers div {
-  margin-bottom: var(--small-padding);
-  text-align: center;
+@media (max-width: 400px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
 }
 
-@media (max-width: 500px) {
-  section {
-    display: block;  
-  }
+/* card */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0;
+  align-items: end;
+  justify-items: start;
+}
+
+.card-subtitle {
+  padding-bottom: 5px;
+}
+
+section a {
+  display: block;
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  border-top: 1px solid yellow;
 }
