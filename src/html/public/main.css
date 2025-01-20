@@ -2,12 +2,11 @@
   /* vars */
   --main-text-color: black;
   --main-background-color: white;
-  --link-color: darkblue;
 
   --header-background: white;
   --footer-background: white;
 
-  --small-padding: 2vh;
+  --small-padding: 0.3rem;
 
   box-sizing: border-box;
 }
@@ -21,19 +20,20 @@
 }
 
 body {
+  color: var(--main-text-color);
   min-height: 100vh;
   font-family: "Libre Franklin", sans-serif;
   line-height: 1.5;
-  color: var(--main-text-color);
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
 header {
-  min-height: 10vh;
+  min-height: 5vh;
   background: var(--header-background);
   border-bottom: 1px solid var(--main-text-color);
-  padding-top: calcvar(--small-padding);
+  padding: var(--small-padding) 0;
+  margin-bottom: var(--small-padding);
 }
 
 footer {
@@ -50,10 +50,13 @@ footer address {
   display: inline-block;
 }
 
+footer address a {
+  color: black;
+}
+
 section {
   display: inline-block;
   margin: var(--small-padding);
-  /* padding: 0 var(--small-padding); */
   border: 2px solid var(--main-text-color);
   border-radius: 5px;
   text-align: center;
@@ -75,27 +78,20 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 400px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
-}
-
 /* card */
 .card-title {
   font-size: 1.1rem;
   font-weight: bold;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: auto 1fr;
   gap: 0;
   align-items: end;
   justify-items: start;
+  padding-right: var(--small-padding);
 }
 
 .card-subtitle {
-  padding-bottom: 5px;
+  padding-bottom: 0.2rem;
 }
 
 section a {
@@ -103,4 +99,13 @@ section a {
   background-color: var(--main-text-color);
   color: var(--main-background-color);
   border-top: 1px solid yellow;
+  padding: var(--small-padding);
+}
+
+@media (max-width: 400px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
 }
