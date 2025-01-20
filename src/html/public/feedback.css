@@ -37,13 +37,18 @@ textarea{
 
 textarea:valid {
   border: 2px solid orange;
+  border-radius: 5px;
   resize: vertical;
 }
 
 button {
   margin-top: 1.5rem;
+  border-radius: 5px;
   font-size: 0.8rem;
+  font-weight: bold;
   width: 6rem;  
+  background-color: orange;
+  color: white;
 }
 
 a {
