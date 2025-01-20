@@ -8,18 +8,24 @@
 
   --small-padding: 2vh;
 
-  font-family: "Libre Franklin", sans-serif;
-  line-height: 1.5;
-  color: var(--main-text-color);
+  box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   min-height: 100vh;
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5;
+  color: var(--main-text-color);
   display: grid;
-  grid-template-rows: auto 1fr auto;
-
-  margin: 0;
-  padding: 0;
+  grid-template-rows: auto 1fr auto;  
 }
 
 header {
