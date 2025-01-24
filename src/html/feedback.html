@@ -5,13 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Feedback</title>
+  <link rel="stylesheet" href="setup.css">
   <link rel="stylesheet" href="feedback.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-  <div class="grid-container"> 
-    <div></div>   
+  <div class="grid-container">
+    <div></div>
     <div id="app">
       <h1>
         <a title="feedbacks" href="https://github.com/danrusu/anonymous-feedback.git">
@@ -24,13 +25,13 @@
       </h2>
 
       <textarea id="question" type="textarea" placeholder="Type your feedback here. You can use markdown.">
-      </textarea>      
-            
+      </textarea>
+
       <button onclick="submitFeedback()">SUBMIT</button>
 
       <div id="notification"></div>
     </div>
-    <div></div>   
+    <div></div>
   </div>
 
   <script src="feedback.js" async defer></script>

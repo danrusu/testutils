@@ -7,8 +7,6 @@
   --footer-background: white;
 
   --small-padding: 0.3rem;
-
-  box-sizing: border-box;
 }
 
 *,
@@ -22,8 +20,7 @@
 body {
   color: var(--main-text-color);
   min-height: 100vh;
-  font-family: "Libre Franklin", sans-serif;
-  line-height: 1.5;
+
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -54,13 +51,6 @@ footer address a {
   color: black;
 }
 
-section {
-  display: inline-block;
-  margin: var(--small-padding);
-  border: 2px solid var(--main-text-color);
-  border-radius: 5px;
-  text-align: center;
-}
 
 h1 {
   font-size: 2rem;
@@ -73,13 +63,9 @@ h2 {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* card */
-.card-title {
+.section-title {
   font-size: 1.1rem;
   font-weight: bold;
   display: grid;
@@ -90,8 +76,20 @@ a {
   padding-right: var(--small-padding);
 }
 
-.card-subtitle {
+.section-subtitle {
   padding-bottom: 0.2rem;
+}
+
+section {
+  display: inline-block;
+  margin: var(--small-padding);
+  border: 2px solid var(--main-text-color);
+  border-radius: 5px;
+  text-align: center;
+}
+
+section img {
+  border-radius: 5px 0 0 0;
 }
 
 section a {
@@ -100,7 +98,11 @@ section a {
   color: var(--main-background-color);
   border-top: 1px solid yellow;
   padding: var(--small-padding);
+  padding-left: calc(3*var(--small-padding));
+  text-align: left;
 }
+
+
 
 @media (max-width: 400px) {
   main {
