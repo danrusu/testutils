@@ -7,8 +7,6 @@
   --footer-background: white;
 
   --small-padding: 0.3rem;
-
-  box-sizing: border-box;
 }
 
 *,
@@ -22,8 +20,7 @@
 body {
   color: var(--main-text-color);
   min-height: 100vh;
-  font-family: "Libre Franklin", sans-serif;
-  line-height: 1.5;
+
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -64,17 +61,6 @@ h2 {
   margin-top: var(--small-padding);
   font-size: 1rem;
   text-align: center;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
-  text-decoration-thickness: 1px;
 }
 
 

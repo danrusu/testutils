@@ -1,0 +1,27 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 1px;
+}
