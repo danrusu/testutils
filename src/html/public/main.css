@@ -104,6 +104,14 @@ section a {
 
 
 
+@media (max-width: 500px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
 @media (max-width: 400px) {
   main {
     display: grid;
