@@ -1,9 +1,10 @@
-const GITHUB_API_TOKEN = process.env.GITHUB_API_TOKEN; //this sould be a secret
 const TARGET_REPOSITORY = 'anonymous-feedback';
-
+const GITHUB_API_TOKEN = process.env.GITHUB_API_TOKEN; // this sould be a secret
 const authorization = {
   Authorization: `Bearer ${GITHUB_API_TOKEN}`,
 };
+
+module.exports = { submitFeedback };
 
 async function submitFeedback({ feedback, commitMessage = 'feedback' }) {
   const fileDetails = {
@@ -80,5 +81,3 @@ async function appendToFile({
 function githubUrl({ owner, repository, filePath }) {
   return `https://api.github.com/repos/${owner}/${repository}/contents/${filePath}`;
 }
-
-module.exports = { submitFeedback };
