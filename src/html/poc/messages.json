@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "weekend reminder",
+    "priority": "medium",
+    "from": "Dan",
+    "to": "Maria, Tania, Adela",
+    "body": "Have fun this weekend."
+  },
+  {
+    "subject": "weekend reminder",
+    "priority": "high",
+    "from": "Adela",
+    "to": "Dan",
+    "body": "Don't forget to pick me up at 5 pm!"
+  }
+]

@@ -3,11 +3,11 @@
   <message subject="weekend reminder">
     <from>Dan</from>  
     <to>Maria, Tania, Adela</to>    
-    <body priority="medium">Have fun this weekend!</body>
+    <body priority="medium">Have fun this weekend.</body>
   </message>
   <message subject="afterschool pickup">
     <from>Adela</from>  
     <to>Dan</to>  
-    <body priority="high" >Don't forget to pick me up at 5 pm.</body>
+    <body priority="high" >Don't forget to pick me up at 5 pm!</body>
   </message>
 </messages>
