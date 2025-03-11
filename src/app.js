@@ -26,6 +26,11 @@ app.options('/feedback', cors(corsOptions));
 app.get('/feedback', serveFileFromHtml('feedback.html'));
 app.post('/feedback', cors(corsOptions), feedbackHandler);
 
+// poc
+app.get('/poc/xml/:xmlFileName', (req, res) => {
+  serveFileFromHtml('poc', `${req.params.xmlFileName}.xml`)(req, res);
+});
+
 function serveFileFromHtml(...relativePath) {
   return function (_req, res) {
     res.sendFile(join(__dirname, 'html', ...relativePath));
