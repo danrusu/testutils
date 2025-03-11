@@ -1,14 +1,14 @@
 const { submitFeedback } = require('./githubApi');
 
 module.exports = {
-  feedbackHandler,
+  feedbackController,
 };
 
-async function feedbackHandler(req, res) {
+async function feedbackController(req, res) {
   try {
     await submitFeedback(req.body);
     res.sendStatus(200);
   } catch (e) {
-    res.sendStatus(500);
+    res.status(500).send(err.message || 'feedbackController error');
   }
 }
