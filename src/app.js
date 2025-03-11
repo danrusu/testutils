@@ -39,6 +39,9 @@ app.all('/api/echo', cors(corsOptions), echoController);
 app.get('/poc/xml/:xmlFileName', (req, res) => {
   serveFileFromHtml('poc', `${req.params.xmlFileName}.xml`)(req, res);
 });
+app.get('/poc/json/:jsonFileName', (req, res) => {
+  serveFileFromHtml('poc', `${req.params.jsonFileName}.json`)(req, res);
+});
 
 function serveFileFromHtml(...relativePath) {
   return function (_req, res) {
