@@ -50,7 +50,7 @@ app.post('/poc/access-token', (_req, res) => {
 });
 app.post('/poc/access-token-use', (req, res) => {
   if (req.headers?.authorization === `Bearer ${POC_ACCESS_TOKEN}`) {
-    res.send({ status: authenticated });
+    res.send({ status: 'authenticated' });
   } else {
     res.sendStatus(401);
   }
