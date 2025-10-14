@@ -37,10 +37,10 @@ app.all('/api/echo', cors(corsOptions), echoController);
 
 // poc
 // TODO - expose all POCs
-app.get('/poc/xml/:xmlFileName', (req, res) => {
+app.get('/poc/xml/:xmlFileName', cors(corsOptions), (req, res) => {
   serveFileFromHtml('poc', `${req.params.xmlFileName}.xml`)(req, res);
 });
-app.get('/poc/json/:jsonFileName', (req, res) => {
+app.get('/poc/json/:jsonFileName', cors(corsOptions), (req, res) => {
   serveFileFromHtml('poc', `${req.params.jsonFileName}.json`)(req, res);
 });
 
