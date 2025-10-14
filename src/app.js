@@ -45,10 +45,10 @@ app.get('/poc/json/:jsonFileName', cors(corsOptions), (req, res) => {
 });
 
 const POC_ACCESS_TOKEN = '123456789';
-app.post('/poc/access-token', (_req, res) => {
+app.post('/poc/access-token', cors(corsOptions), (_req, res) => {
   res.send({ access_token: POC_ACCESS_TOKEN, token_type: 'bearer' });
 });
-app.post('/poc/access-token-use', (req, res) => {
+app.post('/poc/access-token-use', cors(corsOptions), (req, res) => {
   if (req.headers?.authorization === `Bearer ${POC_ACCESS_TOKEN}`) {
     res.send({ status: 'authenticated' });
   } else {
