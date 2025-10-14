@@ -36,11 +36,15 @@ app.post('/feedback', cors(corsOptions), feedbackController);
 app.all('/api/echo', cors(corsOptions), echoController);
 
 // poc
+// TODO - expose all POCs
 app.get('/poc/xml/:xmlFileName', (req, res) => {
   serveFileFromHtml('poc', `${req.params.xmlFileName}.xml`)(req, res);
 });
 app.get('/poc/json/:jsonFileName', (req, res) => {
   serveFileFromHtml('poc', `${req.params.jsonFileName}.json`)(req, res);
+});
+app.post('/poc/access-token', (_req, res) => {
+  res.send({ access_token: '123456789', token_type: 'bearer' });
 });
 
 function serveFileFromHtml(...relativePath) {
