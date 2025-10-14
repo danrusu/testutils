@@ -43,8 +43,17 @@ app.get('/poc/xml/:xmlFileName', (req, res) => {
 app.get('/poc/json/:jsonFileName', (req, res) => {
   serveFileFromHtml('poc', `${req.params.jsonFileName}.json`)(req, res);
 });
+
+const POC_ACCESS_TOKEN = '123456789';
 app.post('/poc/access-token', (_req, res) => {
-  res.send({ access_token: '123456789', token_type: 'bearer' });
+  res.send({ access_token: POC_ACCESS_TOKEN, token_type: 'bearer' });
+});
+app.post('/poc/access-token-use', (req, res) => {
+  if (req.headers?.authorization === `Bearer ${POC_ACCESS_TOKEN}`) {
+    res.send({ status: authenticated });
+  } else {
+    res.sendStatus(401);
+  }
 });
 
 function serveFileFromHtml(...relativePath) {
